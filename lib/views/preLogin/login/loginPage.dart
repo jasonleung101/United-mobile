@@ -30,7 +30,7 @@ class LoginPage extends StatelessWidget {
           AppTextFormField(
             textController: controller.usernameInputController,
             labelText: "Username",
-          ).addPaddingToTheWidget(0, 0, 36.h, 0),
+          ).addPaddingToTheWidget(top: 0, right: 0, bottom: 36.h, left: 0),
           AppTextFormField(
             textController: controller.passwordInputController,
             labelText: "Password",
@@ -41,7 +41,7 @@ class LoginPage extends StatelessWidget {
                 controller.isBtnEnable(false);
               }
             },
-          ).addPaddingToTheWidget(0, 0, 36.h, 0),
+          ).addPaddingToTheWidget(top: 0, right: 0, bottom: 36.h, left: 0),
           Obx(
             () => RaisedButton(
               child: Text(
@@ -58,7 +58,7 @@ class LoginPage extends StatelessWidget {
             ),
           ),
         ],
-      ).addPaddingToTheWidget(0, 24.w, 0, 24.w),
+      ).addPaddingToTheWidget(top: 0, right: 24.w, bottom: 0, left: 24.w),
     );
   }
 }

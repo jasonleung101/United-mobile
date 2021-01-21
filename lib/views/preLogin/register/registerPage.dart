@@ -37,7 +37,7 @@ class RegisterPage extends StatelessWidget {
                 } else {
                   controller.isBtnEnable(false);
                 }
-              }).addPaddingToTheWidget(0, 0, 36.h, 0),
+              }).addPaddingToTheWidget(top: 0, right: 0, bottom: 36.h, left: 0),
           AppTextFormField(
               labelText: "Password",
               hintText: "Password",
@@ -49,7 +49,7 @@ class RegisterPage extends StatelessWidget {
                 } else {
                   controller.isBtnEnable(false);
                 }
-              }).addPaddingToTheWidget(0, 0, 36.h, 0),
+              }).addPaddingToTheWidget(top: 0, right: 0, bottom: 36.h, left: 0),
           AppTextFormField(
                   labelText: "Repeat Password",
                   hintText: "Repeat your password",
@@ -62,7 +62,7 @@ class RegisterPage extends StatelessWidget {
                     }
                   },
                   obscureText: true)
-              .addPaddingToTheWidget(0, 0, 72.h, 0),
+              .addPaddingToTheWidget(top: 0, right: 0, bottom: 72.h, left: 0),
           SizedBox(
             width: AppUtils.screenWidth * 0.8,
             child: Obx(() => RaisedButton(
@@ -95,7 +95,7 @@ class RegisterPage extends StatelessWidget {
                 )),
           ),
         ],
-      ).addPaddingToTheWidget(48.h, 48.w, 0, 48.w),
+      ).addPaddingToTheWidget(top: 48.h, right: 48.w, bottom: 0, left: 48.w),
     );
   }
 }

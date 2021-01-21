@@ -4,6 +4,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 class AppTheme {
   static const darkGrey = const Color(0xff363636);
   static const navBarDarkGrey = const Color(0xFF272727);
+  static const lightGrey = const Color(0xFF555555);
   static const white = const Color(0xffffffff);
   static const white_50 = const Color(0x80ffffff);
 

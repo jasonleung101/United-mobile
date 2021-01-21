@@ -18,28 +18,28 @@ class AppBottomNavBar extends StatelessWidget {
           items: <BottomNavigationBarItem>[
             BottomNavigationBarItem(
                 icon: Icon(
-                  Icons.chat,
-                  color: AppTheme.white,
-                ),
-                label: 'Test'),
-            BottomNavigationBarItem(
-                icon: Icon(
                   Icons.home,
                   color: AppTheme.white,
                 ),
                 label: 'Home'),
             BottomNavigationBarItem(
                 icon: Icon(
-                  Icons.chat,
+                  Icons.menu,
                   color: AppTheme.white,
                 ),
-                label: 'Test'),
+                label: 'Todo'),
             BottomNavigationBarItem(
                 icon: Icon(
-                  Icons.chat,
+                  Icons.grid_view,
                   color: AppTheme.white,
                 ),
-                label: 'Test'),
+                label: 'Manu'),
+            BottomNavigationBarItem(
+                icon: Icon(
+                  Icons.person_outline,
+                  color: AppTheme.white,
+                ),
+                label: 'Me'),
           ],
           fixedColor: AppTheme.white,
           backgroundColor: AppTheme.navBarDarkGrey,

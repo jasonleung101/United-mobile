@@ -33,7 +33,8 @@ class FirstPage extends StatelessWidget {
                       Get.toNamed('/sign_up');
                     },
                   ),
-                ).addPaddingToTheWidget(0, 0, 48.h, 0),
+                ).addPaddingToTheWidget(
+                    top: 0, right: 0, bottom: 48.h, left: 0),
               ),
               Center(
                 child: SizedBox(
@@ -51,7 +52,7 @@ class FirstPage extends StatelessWidget {
                     },
                   ),
                 ),
-              ).addPaddingToTheWidget(0, 0, 48.h, 0),
+              ).addPaddingToTheWidget(top: 0, right: 0, bottom: 48.h, left: 0),
               Center(
                 child: SizedBox(
                   height: 60.h,
@@ -70,7 +71,7 @@ class FirstPage extends StatelessWidget {
                 ),
               )
             ],
-          ).addPaddingToTheWidget(0, 0, 86.h, 0),
+          ).addPaddingToTheWidget(top: 0, right: 0, bottom: 86.h, left: 0),
         ),
       ),
     );
