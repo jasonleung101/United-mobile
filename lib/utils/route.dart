@@ -1,8 +1,10 @@
 import 'dart:io';
 
 import 'package:get/get.dart';
-import 'package:password_manager_mobile/views/home/login/loginPage.dart';
-import 'package:password_manager_mobile/views/home/register/registerPage.dart';
+import 'package:password_manager_mobile/views/postLogin/home/homePage.dart';
+import 'package:password_manager_mobile/views/preLogin/landingPage.dart';
+import 'package:password_manager_mobile/views/preLogin/login/loginPage.dart';
+import 'package:password_manager_mobile/views/preLogin/register/registerPage.dart';
 
 typedef RoutingCallBack = Function(Routing);
 
@@ -11,18 +13,27 @@ class AppRoute {
       ? Duration(milliseconds: 200)
       : Duration(milliseconds: 400);
 
-  static final home_page = '/';
-  static final sign_up = '/sign_up';
-  static final log_in = '/log_in';
+  static final homePage = '/';
+  static final signUp = '/sign_up';
+  static final logIn = '/log_in';
+  static final home = '/home';
 
   static final List<GetPage> getPages = [
     GetPage(
-        name: sign_up,
+        name: homePage,
+        page: () => FirstPage(),
+        transitionDuration: _transitionDuration),
+    GetPage(
+        name: signUp,
         page: () => RegisterPage(),
         transitionDuration: _transitionDuration),
     GetPage(
-        name: log_in,
+        name: logIn,
         page: () => LoginPage(),
+        transitionDuration: _transitionDuration),
+    GetPage(
+        name: home,
+        page: () => HomePage(),
         transitionDuration: _transitionDuration),
   ];
 

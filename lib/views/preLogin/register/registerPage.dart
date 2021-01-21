@@ -2,10 +2,11 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:password_manager_mobile/utils/appUtils.dart';
 import 'package:password_manager_mobile/utils/theme.dart';
-import 'package:password_manager_mobile/views/home/register/registerController.dart';
 import 'package:password_manager_mobile/widgets/appTextFormField.dart';
 import 'package:password_manager_mobile/widgets/transparentAppbar.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+
+import 'registerController.dart';
 
 class RegisterPage extends StatelessWidget {
   final RegisterController controller = Get.put(RegisterController());
@@ -21,7 +22,7 @@ class RegisterPage extends StatelessWidget {
             icon: Icon(Icons.chevron_left),
             iconSize: 90.w,
             onPressed: () {
-              Get.toNamed('/');
+              Get.back();
             },
           )),
       body: Column(
@@ -63,7 +64,7 @@ class RegisterPage extends StatelessWidget {
                   obscureText: true)
               .addPaddingToTheWidget(0, 0, 72.h, 0),
           SizedBox(
-            width: AppUtils.screenWidth * 0.9,
+            width: AppUtils.screenWidth * 0.8,
             child: Obx(() => RaisedButton(
                   child: Text(
                     "Sign up",
@@ -94,7 +95,7 @@ class RegisterPage extends StatelessWidget {
                 )),
           ),
         ],
-      ).addPaddingToTheWidget(48.h, 24.w, 0, 24.w),
+      ).addPaddingToTheWidget(48.h, 48.w, 0, 48.w),
     );
   }
 }

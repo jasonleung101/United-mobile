@@ -1,27 +1,24 @@
-import 'package:flutter/cupertino.dart';
+import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:logger/logger.dart';
 
-class RegisterController extends GetxController {
+class LoginController extends GetxController {
   final logger = Get.find<Logger>();
-
+  final isBtnEnable = false.obs;
   final usernameInputController = TextEditingController();
   final passwordInputController = TextEditingController();
-  final repeatInputController = TextEditingController();
 
-  final isBtnEnable = false.obs;
-
-  RegisterController() {}
+  LoginController();
 
   @override
   void onInit() {
-    logger.d('RegisterController onInit');
+    logger.d('LoginController onInit');
     super.onInit();
   }
 
   @override
   void onClose() {
-    logger.d('RegisterController onClose');
+    logger.d('LoginController onClose');
     super.onClose();
   }
 }

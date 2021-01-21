@@ -3,7 +3,6 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 import 'package:password_manager_mobile/utils/appUtils.dart';
 import 'package:password_manager_mobile/utils/theme.dart';
-import '../../utils/extension.dart';
 
 class FirstPage extends StatelessWidget {
   @override

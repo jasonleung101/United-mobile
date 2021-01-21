@@ -2,8 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:get/get.dart';
 import 'package:logger/logger.dart';
+import 'package:password_manager_mobile/global/globalController.dart';
 
-void configEnvironmentAndDependencies() async {
+Future<void> configEnvironmentAndDependencies() async {
   SystemChrome.setSystemUIOverlayStyle(SystemUiOverlayStyle(
     statusBarBrightness: Brightness.dark,
     statusBarColor: Colors.grey[850],
@@ -17,5 +18,6 @@ void configEnvironmentAndDependencies() async {
   );
 
   Get.put<Logger>(logger);
+  Get.put<GlobalController>(GlobalController(), permanent: true);
   logger.i("Finish config, starting app now");
 }

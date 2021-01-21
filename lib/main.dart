@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:password_manager_mobile/utils/theme.dart';
+import 'package:password_manager_mobile/views/splash/splashPage.dart';
 import 'utils/beforeAppStart.dart';
-import 'views/home/landingPage.dart';
 import 'package:get/get.dart';
 import 'utils/route.dart';
 
@@ -28,7 +28,7 @@ class MyApp extends StatelessWidget {
       getPages: AppRoute.getPages,
       routingCallback: AppRoute.observer,
       theme: AppTheme.primary,
-      home: FirstPage(),
+      home: AppSplashPage(),
     );
   }
 }
