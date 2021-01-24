@@ -18,19 +18,19 @@ class AppBottomNavBar extends StatelessWidget {
           items: <BottomNavigationBarItem>[
             BottomNavigationBarItem(
                 icon: Icon(
-                  Icons.home,
+                  Icons.credit_card,
                   color: AppTheme.white,
                 ),
-                label: 'Home'),
+                label: 'Spend'),
+            BottomNavigationBarItem(
+                icon: Icon(
+                  Icons.favorite_border_outlined,
+                  color: AppTheme.white,
+                ),
+                label: 'Save'),
             BottomNavigationBarItem(
                 icon: Icon(
                   Icons.menu,
-                  color: AppTheme.white,
-                ),
-                label: 'Todo'),
-            BottomNavigationBarItem(
-                icon: Icon(
-                  Icons.grid_view,
                   color: AppTheme.white,
                 ),
                 label: 'Manu'),
@@ -43,7 +43,7 @@ class AppBottomNavBar extends StatelessWidget {
           ],
           fixedColor: AppTheme.white,
           backgroundColor: AppTheme.navBarDarkGrey,
-          currentIndex: controller.navBarIndex,
+          currentIndex: controller.selectedIndex,
           onTap: (int value) {
             controller.onNavBarClick(value);
           },

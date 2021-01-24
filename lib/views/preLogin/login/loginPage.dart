@@ -30,6 +30,7 @@ class LoginPage extends StatelessWidget {
           AppTextFormField(
             textController: controller.usernameInputController,
             labelText: "Username",
+            textInputAction: TextInputAction.next,
           ).addPaddingToTheWidget(top: 0, right: 0, bottom: 36.h, left: 0),
           AppTextFormField(
             textController: controller.passwordInputController,
@@ -52,6 +53,7 @@ class LoginPage extends StatelessWidget {
                   borderRadius: BorderRadius.circular(24.0)),
               onPressed: controller.isBtnEnable.value
                   ? () {
+                      FocusScope.of(context).unfocus();
                       Get.toNamed('/home');
                     }
                   : null,

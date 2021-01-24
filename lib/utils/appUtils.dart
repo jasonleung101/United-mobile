@@ -16,4 +16,8 @@ class AppUtils {
   static get numberFormat {
     return NumberFormat.decimalPattern();
   }
+
+  static get currencyFormat {
+    return NumberFormat.simpleCurrency();
+  }
 }

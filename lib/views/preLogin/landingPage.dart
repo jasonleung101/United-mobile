@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:flutter_signin_button/flutter_signin_button.dart';
 import 'package:get/get.dart';
 import 'package:password_manager_mobile/utils/appUtils.dart';
 import 'package:password_manager_mobile/utils/theme.dart';
@@ -53,6 +54,55 @@ class FirstPage extends StatelessWidget {
                   ),
                 ),
               ).addPaddingToTheWidget(top: 0, right: 0, bottom: 48.h, left: 0),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  SizedBox(
+                    height: 125.h,
+                    width: 125.w,
+                    child: SignInButton(
+                      Buttons.AppleDark,
+                      mini: true,
+                      onPressed: () {},
+                      shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(36)),
+                    ),
+                  ).addPaddingToTheWidget(left: 24.w, right: 24.w),
+                  SizedBox(
+                    height: 125.h,
+                    width: 125.w,
+                    child: SignInButton(
+                      Buttons.Facebook,
+                      mini: true,
+                      onPressed: () {},
+                      shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(36)),
+                    ),
+                  ).addPaddingToTheWidget(left: 24.w, right: 24.w),
+                  SizedBox(
+                    height: 125.h,
+                    width: 125.w,
+                    child: SignInButton(
+                      Buttons.GitHub,
+                      onPressed: () {},
+                      mini: true,
+                      shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(36)),
+                    ),
+                  ).addPaddingToTheWidget(left: 24.w, right: 24.w),
+                  SizedBox(
+                    height: 125.h,
+                    width: 125.w,
+                    child: SignInButton(
+                      Buttons.LinkedIn,
+                      onPressed: () {},
+                      mini: true,
+                      shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(36)),
+                    ),
+                  ).addPaddingToTheWidget(left: 24.w, right: 24.w),
+                ],
+              ).addPaddingToTheWidget(bottom: 36.h),
               Center(
                 child: SizedBox(
                   height: 60.h,

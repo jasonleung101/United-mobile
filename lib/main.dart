@@ -29,6 +29,7 @@ class MyApp extends StatelessWidget {
       routingCallback: AppRoute.observer,
       theme: AppTheme.primary,
       home: AppSplashPage(),
+      enableLog: false,
     );
   }
 }

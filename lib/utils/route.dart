@@ -1,7 +1,11 @@
 import 'dart:io';
 
 import 'package:get/get.dart';
-import 'package:password_manager_mobile/views/postLogin/home/homePage.dart';
+import 'package:password_manager_mobile/views/postLogin/me/meLandingPage.dart';
+import 'package:password_manager_mobile/views/postLogin/menu/menuLandingPage.dart';
+import 'package:password_manager_mobile/views/postLogin/postLoginMain.dart';
+import 'package:password_manager_mobile/views/postLogin/save/saveLandingPage.dart';
+import 'package:password_manager_mobile/views/postLogin/spend/spendLandingPage.dart';
 import 'package:password_manager_mobile/views/preLogin/landingPage.dart';
 import 'package:password_manager_mobile/views/preLogin/login/loginPage.dart';
 import 'package:password_manager_mobile/views/preLogin/register/registerPage.dart';
@@ -17,6 +21,10 @@ class AppRoute {
   static final signUp = '/sign_up';
   static final logIn = '/log_in';
   static final home = '/home';
+  static final spend = '/spend';
+  static final save = '/save';
+  static final menu = '/menu';
+  static final me = '/me';
 
   static final List<GetPage> getPages = [
     GetPage(
@@ -33,7 +41,23 @@ class AppRoute {
         transitionDuration: _transitionDuration),
     GetPage(
         name: home,
-        page: () => HomePage(),
+        page: () => PostLoginMainPage(),
+        transitionDuration: _transitionDuration),
+    GetPage(
+        name: spend,
+        page: () => SpendLandingPage(),
+        transitionDuration: _transitionDuration),
+    GetPage(
+        name: save,
+        page: () => SaveLandingPage(),
+        transitionDuration: _transitionDuration),
+    GetPage(
+        name: menu,
+        page: () => MenuLandingPage(),
+        transitionDuration: _transitionDuration),
+    GetPage(
+        name: me,
+        page: () => MeLandingPage(),
         transitionDuration: _transitionDuration),
   ];
 

@@ -3,7 +3,9 @@ import 'package:logger/logger.dart';
 
 class GlobalController extends GetxController {
   final logger = Get.find<Logger>();
-  int navBarIndex = 0;
+  final _navBarIndex = 0.obs;
+  set selectedIndex(value) => this._navBarIndex.value = value;
+  get selectedIndex => this._navBarIndex.value;
 
   GlobalController();
 
@@ -20,7 +22,7 @@ class GlobalController extends GetxController {
   }
 
   void onNavBarClick(int index) {
-    navBarIndex = index;
+    this.selectedIndex = index;
     update();
   }
 }

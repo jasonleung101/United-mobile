@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:password_manager_mobile/utils/theme.dart';
 
-extension AppExtension on Widget {
+extension WidgetExtension on Widget {
   Widget addPaddingToTheWidget(
       {double top, double right, double bottom, double left}) {
     return Padding(
@@ -26,7 +26,7 @@ extension AppExtension on Widget {
               onPressed: () {},
             ),
           ),
-        ).addPaddingToTheWidget(top: 120.h, right: 0, bottom: 0, left: 60.w),
+        ).addPaddingToTheWidget(top: 120.h, right: 0, bottom: 0, left: 48.w),
       ],
     );
   }

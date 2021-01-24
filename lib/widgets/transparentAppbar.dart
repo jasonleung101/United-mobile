@@ -12,6 +12,7 @@ PreferredSize transparentAppbar(
       elevation: 0.0,
       leading: leading,
       automaticallyImplyLeading: false,
+      centerTitle: true,
     ),
   );
 }

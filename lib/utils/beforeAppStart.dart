@@ -16,7 +16,6 @@ Future<void> configEnvironmentAndDependencies() async {
       printEmojis: true,
     ),
   );
-
   Get.put<Logger>(logger);
   Get.put<GlobalController>(GlobalController(), permanent: true);
   logger.i("Finish config, starting app now");
