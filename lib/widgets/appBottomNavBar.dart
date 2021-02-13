@@ -33,7 +33,7 @@ class AppBottomNavBar extends StatelessWidget {
                   Icons.menu,
                   color: AppTheme.white,
                 ),
-                label: 'Manu'),
+                label: 'Menu'),
             BottomNavigationBarItem(
                 icon: Icon(
                   Icons.person_outline,
@@ -46,6 +46,8 @@ class AppBottomNavBar extends StatelessWidget {
           currentIndex: controller.selectedIndex,
           onTap: (int value) {
             controller.onNavBarClick(value);
+            controller.pageController.animateToPage(value,
+                duration: Duration(milliseconds: 200), curve: Curves.easeOut);
           },
         ),
       ),
